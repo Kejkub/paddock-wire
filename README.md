@@ -31,6 +31,8 @@ If you don't want to use an API key, switch on **No-AI mode** in Settings. In th
 
 Paddock Wire is a single static HTML file with no backend. Your save data and settings are stored only in your browser's localStorage. If you use an AI provider, your API key stays in your browser and is sent only to the provider you chose.
 
+The hosted version counts anonymous page visits with [GoatCounter](https://www.goatcounter.com/), which uses no cookies and collects no personal data. It does not see your save file or what you do in the program.
+
 ## Technical notes
 
 - One `index.html` file, vanilla JavaScript, no build step, no install.
