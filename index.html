@@ -1316,8 +1316,8 @@ function hueColor(s){ let h=0; for(const ch of String(s)) h=(h*31+ch.charCodeAt(
 
 /* ---------- stan aplikacji ---------- */
 let state = {snapshot:null, articles:[], tweets:[], pending:null, batches:[]};
-let settings = {provider:"gemini", key:"", models:{}, teamRows:null, eco:false, noAI:false, lang:"pl"};
-const LANG=(()=>{ try{ const x=JSON.parse(localStorage.getItem(LS_SET)||"null"); return x&&x.lang==="en"?"en":"pl"; }catch(e){ return "pl"; } })();
+let settings = {provider:"gemini", key:"", models:{}, teamRows:null, eco:false, noAI:false, lang:"en"};
+const LANG=(()=>{ try{ const x=JSON.parse(localStorage.getItem(LS_SET)||"null"); return x&&x.lang==="pl"?"pl":"en"; }catch(e){ return "en"; } })();
 const LOC=LANG==="en"?"en-GB":"pl-PL"; const HT_TR=LANG==="en"?"#Transfers":"#Transfery"; const RNDW=LANG==="en"?"Round ":"Runda ";
 let session = {inTok:0, outTok:0};
 let busy = false;
