@@ -4,7 +4,7 @@ A fan-made F1 media portal built from your **F1 Manager 2024** career save. Load
 
 **Live version:** https://kejkub.github.io/paddock-wire/
 
-> Status: work in progress. Feedback and ideas are very welcome (open an issue).
+> **Version 0.4.4 (early access).** This is an early version and may contain bugs. Bug reports and ideas are very welcome: [open an issue](https://github.com/Kejkub/paddock-wire/issues) or write to the author on Discord.
 
 ## What it does
 
@@ -14,7 +14,8 @@ A fan-made F1 media portal built from your **F1 Manager 2024** career save. Load
 - **Stats Corner**: driver and team tables, cumulative points chart, results map, head-to-head between team-mates, car strength versus expectations and engine suppliers.
 - **Team, Academy and Grid**: rosters with reserves and juniors, academy history season by season, and the next-season grid based on contracts.
 - **Customisation**: your own team names, logos, car images and colour palettes, plus settings export and import.
-- **Languages**: Polish and English interface.
+- **Languages**: English (default) and Polish interface.
+- **Help built in**: a Wiki describing every tab and option, and a Changelog with the history of changes.
 
 ## How to use it
 
@@ -38,6 +39,15 @@ The hosted version counts anonymous page visits with [GoatCounter](https://www.g
 - One `index.html` file, vanilla JavaScript, no build step, no install.
 - Works in current desktop browsers.
 - Because data is stored per web address, data saved in a local copy of the file will not appear on the hosted version. Use settings export and import to move it.
+
+## Feedback and contact
+
+- Bugs and suggestions: [GitHub Issues](https://github.com/Kejkub/paddock-wire/issues). Please include the logs from **Settings → Diagnostics** and never paste your API key.
+- Questions and contact with the author: [Discord](https://discord.com/users/414150520899502082).
+
+## Support
+
+Paddock Wire is free. If you like it, you can support its development with a voluntary donation on [Ko-fi](https://ko-fi.com/kakub). A donation gives no extra features or access.
 
 ## Disclaimer
 
