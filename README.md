@@ -4,18 +4,18 @@ A fan-made F1 media portal built from your **F1 Manager 2024** career save. Load
 
 **Live version:** https://kejkub.github.io/paddock-wire/
 
-> **Version 0.4.4 (early access).** This is an early version and may contain bugs. Bug reports and ideas are very welcome: [open an issue](https://github.com/Kejkub/paddock-wire/issues) or write to the author on Discord.
+> **Version 0.5.0 (early access).** This is an early version and may contain bugs. Bug reports and ideas are very welcome: [open an issue](https://github.com/Kejkub/paddock-wire/issues) or write to the author on Discord.
 
 ## What it does
 
 - **Paddock News**: front page and article list with categories such as race reports, qualifying, car analysis, title fight, transfers, rumours, throwbacks, fun facts, academy profiles and F2/F3 coverage.
-- **Paddock X**: a Twitter-style feed with official team and series accounts, journalists and fans. It has threads, polls and replies, and you can post your own and get reactions.
+- **Paddock X**: a Twitter-style feed with official team and series accounts, journalists and fans. It has threads, polls and replies, and you can post your own and get reactions. New in 0.5.0: the **Paddock Radio** account posts 1 to 3 team radio dialogues (driver and race engineer) after every Grand Prix, team accounts post **anniversaries** of milestones from their history, and the F1 account summarises the grid for next season after the transfer posts. Driver names in posts open their stats.
 - **Results**: every round of F1, F2 and F3, race and sprint, with driver and team standings.
-- **Stats Corner**: driver and team tables, cumulative points chart, results map, head-to-head between team-mates, car strength versus expectations and engine suppliers.
-- **Team, Academy and Grid**: rosters with reserves and juniors, academy history season by season, and the next-season grid based on contracts.
+- **Stats Corner**: driver and team tables, cumulative points chart (points or championship position, with a tooltip for every round), results map, head-to-head between team-mates, car strength versus expectations and engine suppliers.
+- **Team, Academy and Grid**: rosters with reserves and juniors, academy history season by season, and the next-season grid based on contracts. A team profile always shows the full line-up for next season. The driver comparison has a new picker with search.
 - **Customisation**: your own team names, logos, car images and colour palettes, plus settings export and import.
 - **Languages**: English (default) and Polish interface.
-- **Help built in**: a Wiki describing every tab and option, and a Changelog with the history of changes.
+- **Help built in**: a Wiki describing every tab and option, a Changelog with the history of changes, and a short "What's new" window on the first visit after an update.
 
 ## How to use it
 
@@ -26,7 +26,7 @@ A fan-made F1 media portal built from your **F1 Manager 2024** career save. Load
 
 ### No-AI mode
 
-If you don't want to use an API key, switch on **No-AI mode** in Settings. In this mode the portal builds article headlines from templates only. There is no full article text and no journalist or fan posts, while official-account posts are assembled as usual.
+If you don't want to use an API key, switch on **No-AI mode** in Settings. In this mode the portal builds article headlines from templates only. There is no full article text and no journalist or fan posts, while official-account posts (including Paddock Radio and anniversaries) are assembled as usual.
 
 ## Privacy
 
