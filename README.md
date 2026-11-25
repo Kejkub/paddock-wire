@@ -4,7 +4,7 @@ A fan-made F1 media portal built from your **F1 Manager 2024** career save. Load
 
 **Live version:** https://kejkub.github.io/paddock-wire/
 
-> **Version 0.5.0 (early access).** This is an early version and may contain bugs. Bug reports and ideas are very welcome: [open an issue](https://github.com/Kejkub/paddock-wire/issues) or write to the author on Discord.
+> **Version 0.5.1 (early access).** This is an early version and may contain bugs. Bug reports and ideas are very welcome: [open an issue](https://github.com/Kejkub/paddock-wire/issues) or write to the author on Discord.
 
 ## What it does
 
@@ -13,7 +13,7 @@ A fan-made F1 media portal built from your **F1 Manager 2024** career save. Load
 - **Results**: every round of F1, F2 and F3, race and sprint, with driver and team standings.
 - **Stats Corner**: driver and team tables, cumulative points chart (points or championship position, with a tooltip for every round), results map, head-to-head between team-mates, car strength versus expectations and engine suppliers.
 - **Team, Academy and Grid**: rosters with reserves and juniors, academy history season by season, and the next-season grid based on contracts. A team profile always shows the full line-up for next season. The driver comparison has a new picker with search.
-- **Customisation**: your own team names, logos, car images and colour palettes, plus settings export and import.
+- **Customisation**: your own team names, logos, car images and colour palettes, plus settings export and import. New in 0.5.1: a **Logo instead of the car** option that shows team logos instead of cars (handy when replaying older seasons), and six new colour themes (Midnight blue, Forest, Sunset, Violet night, Mono blue, Cream).
 - **Languages**: English (default) and Polish interface.
 - **Help built in**: a Wiki describing every tab and option, a Changelog with the history of changes, and a short "What's new" window on the first visit after an update.
 
