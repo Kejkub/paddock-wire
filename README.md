@@ -4,7 +4,7 @@ A fan-made F1 media portal built from your **F1 Manager 2024** career save. Load
 
 **Live version:** https://kejkub.github.io/paddock-wire/
 
-> **Version 0.5.1 (early access).** This is an early version and may contain bugs. Bug reports and ideas are very welcome: [open an issue](https://github.com/Kejkub/paddock-wire/issues) or write to the author on Discord.
+> **Version 0.5.2 (early access).** This is an early version and may contain bugs. Bug reports and ideas are very welcome: [open an issue](https://github.com/Kejkub/paddock-wire/issues) or write to the author on Discord.
 
 ## What it does
 

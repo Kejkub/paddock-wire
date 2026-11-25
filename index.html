@@ -652,6 +652,8 @@ html[data-theme=light] .rip{background:rgba(0,0,0,.14)}
 .as-car:has(img+img){width:52%;flex-direction:row;align-items:center;justify-content:flex-end;gap:2%}.as-car:has(img+img) img,.as-car:has(img+img) img:first-child:not(:only-child),.as-car:has(img+img) img+img{width:49%;max-width:none;margin:0;object-fit:contain}
 .ah-car:has(img+img){width:60%;flex-direction:row;align-items:center;justify-content:flex-end;gap:2%}.ah-car:has(img+img) img,.ah-car:has(img+img) img+img{width:49%;max-width:none}
 @media(max-width:700px){.as-car:has(img+img),.ah-car:has(img+img){width:80%}}
+.ah-hero{padding:16px 22px}.ah-st{margin-top:16px}.ah-car{transform:none;translate:0 -50%}
+@media(max-width:700px){.ah-hero{padding:14px 16px}.ah-st{margin-top:14px}}
 
 #genFail{z-index:130}
 .gf-sheet{max-width:640px;position:relative;border-color:rgba(var(--redrgb),.5)}
@@ -994,7 +996,7 @@ try{var S=JSON.parse(localStorage.getItem("pw_f1m24_settings_v1")||"null");if(S&
 </div><aside class="xside" id="xSide"></aside></div>
   </section>
 </main>
-<footer class="verFoot">Paddock Wire · <span data-appver="foot">version 0.5.1 (early access)</span> · <a href="#" data-wiki="" style="color:inherit;text-decoration:underline">Wiki</a> · <a href="#" data-clog="1" style="color:inherit;text-decoration:underline">Changelog</a> · <a href="#" id="openGuide" style="color:inherit;text-decoration:underline">Przewodnik</a></footer><div id="cornerLinks"><a href="https://discord.com/users/414150520899502082" target="_blank" rel="noopener" title="Discord"><span class="ic ic-dc"></span>Discord</a><a href="https://github.com/Kejkub/paddock-wire" target="_blank" rel="noopener" title="GitHub"><span class="ic ic-gh"></span>GitHub</a><a href="https://ko-fi.com/kakub" target="_blank" rel="noopener" title="Ko-fi"><span class="ic ic-kf"></span>Ko-fi</a></div>
+<footer class="verFoot">Paddock Wire · <span data-appver="foot">version 0.5.2 (early access)</span> · <a href="#" data-wiki="" style="color:inherit;text-decoration:underline">Wiki</a> · <a href="#" data-clog="1" style="color:inherit;text-decoration:underline">Changelog</a> · <a href="#" id="openGuide" style="color:inherit;text-decoration:underline">Przewodnik</a></footer><div id="cornerLinks"><a href="https://discord.com/users/414150520899502082" target="_blank" rel="noopener" title="Discord"><span class="ic ic-dc"></span>Discord</a><a href="https://github.com/Kejkub/paddock-wire" target="_blank" rel="noopener" title="GitHub"><span class="ic ic-gh"></span>GitHub</a><a href="https://ko-fi.com/kakub" target="_blank" rel="noopener" title="Ko-fi"><span class="ic ic-kf"></span>Ko-fi</a></div>
 
 <div id="dropOverlay">Upuść plik z danymi tutaj</div>
 <div id="busy"><div class="spin"></div><span id="busyTxt">Pracuję…</span></div>
@@ -1012,7 +1014,7 @@ try{var S=JSON.parse(localStorage.getItem("pw_f1m24_settings_v1")||"null");if(S&
   <div class="gf-foot"><button class="btn sm" id="gfLogs">Skopiuj logi</button><button class="btn sm" id="gfSet">Ustawienia</button><button class="btn red" id="gfRetry">Spróbuj ponownie</button><button class="btn" id="gfClose">Zamknij</button></div>
 </div></div>
 <div class="modal" id="welcome"><div class="sheet wl-sheet" role="dialog" aria-label="Przewodnik po portalu">
-  <div class="wl-head"><span class="wl-badge" data-appver="badge">VERSION 0.5.1 (early access)</span><h2>Witaj w Paddock <b>Wire</b></h2>
+  <div class="wl-head"><span class="wl-badge" data-appver="badge">VERSION 0.5.2 (early access)</span><h2>Witaj w Paddock <b>Wire</b></h2>
     <p>Fikcyjny polski portal o F1, F2 i F3, który opowiada historię Twojej kariery na podstawie wczytanego zapisu gry.</p></div>
   <div class="wl-body">
     <h3>Szybki start</h3>
@@ -4787,9 +4789,11 @@ function playFxLite(){ playRun(); setTimeout(()=>{ try{ champBurst(); }catch(e){
 function playFx(){ playRun(); setTimeout(()=>{ try{ champBurst(); }catch(e){} },900); if(MO_REDUCE||!("IntersectionObserver" in window)) return; const v=document.querySelector("main section:not(.hidden)"); if(!v) return;
   if(_rvIO) _rvIO.disconnect(); document.querySelectorAll(".rv").forEach(e=>{ e.classList.remove("rv","in"); e.style.removeProperty("--i"); });
   const T=rvTargets(v); if(!T.length) return; T.forEach(e=>e.classList.add("rv"));
-  _rvIO=new IntersectionObserver(es=>{ let i=0; es.filter(x=>x.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top||a.boundingClientRect.left-b.boundingClientRect.left).forEach(x=>{ const e=x.target; _rvIO.unobserve(e); e.style.setProperty("--i",Math.min(i++,9)); e.classList.add("in"); countUps(e);
-      const done=()=>{ e.classList.remove("rv","in"); e.style.removeProperty("--i"); e.removeEventListener("animationend",h); }; const h=ev=>{ if(ev.target===e&&ev.animationName==="rvIn") done(); }; e.addEventListener("animationend",h); setTimeout(done,2200); }); },{threshold:.05,rootMargin:"0px 0px -3% 0px"});
-  T.forEach(e=>_rvIO.observe(e)); clearTimeout(_rvT); _rvT=setTimeout(()=>{ document.querySelectorAll(".rv:not(.in)").forEach(e=>{ const r=e.getBoundingClientRect(); if(r.height===0||r.width===0){ e.classList.remove("rv"); } }); },600); }
+  const rvCb=es=>{ let i=0; es.filter(x=>x.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top||a.boundingClientRect.left-b.boundingClientRect.left).forEach(x=>{ const e=x.target; _rvIO.unobserve(e); e.style.setProperty("--i",e.closest("#aBody")?Math.min(i++,3)/3:Math.min(i++,9)); e.classList.add("in"); countUps(e);
+      const done=()=>{ e.classList.remove("rv","in"); e.style.removeProperty("--i"); e.removeEventListener("animationend",h); }; const h=ev=>{ if(ev.target===e&&ev.animationName==="rvIn") done(); }; e.addEventListener("animationend",h); setTimeout(done,2200); }); };
+  _rvIO=new IntersectionObserver(rvCb,{threshold:.05,rootMargin:"0px 0px -3% 0px"});
+  T.forEach(e=>_rvIO.observe(e));
+  { const vh=window.innerHeight||800, es=[]; T.forEach(e=>{ const r=e.getBoundingClientRect(); if(r.width>0&&r.height>0&&r.top<vh*.97&&r.bottom>0) es.push({target:e,isIntersecting:true,boundingClientRect:r}); }); if(es.length) rvCb(es); } clearTimeout(_rvT); _rvT=setTimeout(()=>{ document.querySelectorAll(".rv:not(.in)").forEach(e=>{ const r=e.getBoundingClientRect(); if(r.height===0||r.width===0){ e.classList.remove("rv"); } }); },600); }
 function tabsFlags(){ const t=document.querySelector(".tabs"); if(!t) return; const ov=t.scrollWidth>t.clientWidth+2; t.classList.toggle("ov",ov); t.classList.toggle("at-s",ov&&t.scrollLeft<=2); t.classList.toggle("at-e",ov&&t.scrollLeft+t.clientWidth>=t.scrollWidth-2); }
 function posTabInd(){ const tabs=document.querySelector(".tabs"), on=tabs&&tabs.querySelector(".tab.on"); let ind=$("tabInd"); if(!tabs) return; if(on&&tabs.scrollWidth>tabs.clientWidth+2){ const want=on.offsetLeft-(tabs.clientWidth-on.offsetWidth)/2; try{ tabs.scrollTo({left:Math.max(0,want),behavior:MO_REDUCE?"auto":"smooth"}); }catch(e){ tabs.scrollLeft=Math.max(0,want); } } tabsFlags(); if(!ind){ ind=document.createElement("span"); ind.id="tabInd"; tabs.appendChild(ind); } if(!on){ ind.style.width="0"; return; }
   const pad=Math.min(12,on.offsetWidth*.14); ind.style.width=Math.max(8,on.offsetWidth-pad*2)+"px"; ind.style.transform="translateX("+(on.offsetLeft+pad)+"px)"; }
@@ -5106,7 +5110,7 @@ loadAll(); applyNoAI(); updateTokens(); renderAll(); setTimeout(resumePending,80
 /* ---------- ekran powitalny ---------- */
 const WL_KEY="pw_welcome_seen_v03";
 /* ===== Wiki, Changelog i wersja programu ===== */
-const APP_VERSION="0.5.1", VER_LABEL=APP_VERSION+" (early access)";
+const APP_VERSION="0.5.2", VER_LABEL=APP_VERSION+" (early access)";
 /* Changelog: najnowsza wersja na górze. Nowe wpisy dodawaj WYŁĄCZNIE na wyraźne polecenie zmiany wersji programu. */
 /*EN_WIKI_START*/
 const WIKI_GROUPS_EN=[["Start",["start","top"]],["Portal tabs",["news","x","results","squad","academy","grid","stats"]],["Settings",["set-ai","set-data","set-sav","set-diag"]],["Modes and content",["noai","how"]],["Information",["about"]]];
@@ -5243,6 +5247,15 @@ const WIKI_EN=[
   <p>The articles, posts and statements in the portal are fictional, invented entertainment. They do not reflect real events or the opinions of real people.</p>`}
 ];
 const CHANGELOG_EN=[
+ {v:"0.5.2",d:"25.11.2026",g:[
+  ["Minor changes",[
+   "Academy: the team banner is lower, and its parts and the junior tiles now start appearing together with the team picker instead of a second later."
+  ]],
+  ["Bugs and fixes",[
+   "Academy: the car in the team banner showed up at the bottom during the loading animation and then jumped to its place. Fixed.",
+   "Academy: while loading, an empty banner and a bare timeline line were visible for a moment. Items that are already on screen now start their animation immediately, on every tab."
+  ]]
+ ]},
  {v:"0.5.1",d:"25.11.2026",g:[
   ["Major changes",[
    "New option in Settings → Data and look: “Logo instead of the car”. When on, the portal shows team logos instead of cars on post cards, account covers, driver and team profiles, squads and the academy. Suggested by: esdraslobo710-web.",
@@ -5363,6 +5376,15 @@ const CHANGELOG_EN=[
 ];
 /*EN_WIKI_END*/
 const CHANGELOG=LANG==="en"?CHANGELOG_EN:[
+ {v:"0.5.2",d:"25.11.2026",g:[
+  ["Małe zmiany",[
+   "Akademia: baner zespołu jest niższy, a jego elementy i kafelki juniorów zaczynają się pojawiać razem z wyborem zespołów, a nie sekundę później."
+  ]],
+  ["Błędy i poprawki",[
+   "Akademia: auto w banerze zespołu pojawiało się na dole podczas animacji wczytywania, a potem przeskakiwało na swoje miejsce. Naprawiono.",
+   "Akademia: podczas wczytywania przez chwilę widać było pusty baner i samą linię osi czasu. Elementy, które są już na ekranie, uruchamiają teraz animację od razu, na wszystkich zakładkach."
+  ]]
+ ]},
  {v:"0.5.1",d:"25.11.2026",g:[
   ["Duże zmiany",[
    "Nowa opcja w Ustawienia → Dane i wygląd: „Logo zamiast auta”. Po włączeniu portal pokazuje logo zespołów zamiast bolidów na kartach wpisów, okładkach kont, profilach kierowców i zespołów, w składach i w akademii. Propozycja: esdraslobo710-web.",
