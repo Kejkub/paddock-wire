@@ -4,13 +4,14 @@ A fan-made F1 media portal built from your **F1 Manager 2024** career save. Load
 
 **Live version:** https://kejkub.github.io/paddock-wire/
 
-> **Version 0.5.2 (early access).** This is an early version and may contain bugs. Bug reports and ideas are very welcome: [open an issue](https://github.com/Kejkub/paddock-wire/issues) or write to the author on Discord.
+> **Version 0.6.0 (early access).** This is an early version and may contain bugs. Bug reports and ideas are very welcome: [open an issue](https://github.com/Kejkub/paddock-wire/issues) or write to the author on Discord.
 
 ## What it does
 
 - **Paddock News**: front page and article list with categories such as race reports, qualifying, car analysis, title fight, transfers, rumours, throwbacks, fun facts, academy profiles and F2/F3 coverage.
-- **Paddock X**: a Twitter-style feed with official team and series accounts, journalists and fans. It has threads, polls and replies, and you can post your own and get reactions. New in 0.5.0: the **Paddock Radio** account posts 1 to 3 team radio dialogues (driver and race engineer) after every Grand Prix, team accounts post **anniversaries** of milestones from their history, and the F1 account summarises the grid for next season after the transfer posts. Driver names in posts open their stats.
-- **Results**: every round of F1, F2 and F3, race and sprint, with driver and team standings.
+- **Paddock X**: a Twitter-style feed with official team and series accounts, journalists and fans. It has threads, polls and replies, and you can post your own and get reactions. New in 0.5.0: the **Paddock Radio** account posts 1 to 3 team radio dialogues (driver and race engineer) after every Grand Prix, team accounts post **anniversaries** of milestones from their history, and the F1 account summarises the grid for next season after the transfer posts. Driver names in posts open their stats. New in 0.6.0: milestone and record posts and career-end thanks from the F1 and team accounts, and posts for the two previous seasons.
+- **Results**: every round of F1, F2 and F3, session by session (practice, qualifying, sprint, race), with driver and team standings. New in 0.6.0: best Q times in gold, fastest lap in purple, DNFs in red.
+- **Calendar** and **Hall of Fame** (new in 0.6.0): the season as tiles with winners, and all-time titles, current and past champions, leaderboards and season records for F1, F2 and F3.
 - **Stats Corner**: driver and team tables, cumulative points chart (points or championship position, with a tooltip for every round), results map, head-to-head between team-mates, car strength versus expectations and engine suppliers.
 - **Team, Academy and Grid**: rosters with reserves and juniors, academy history season by season, and the next-season grid based on contracts. A team profile always shows the full line-up for next season. The driver comparison has a new picker with search.
 - **Customisation**: your own team names, logos, car images and colour palettes, plus settings export and import. New in 0.5.1: a **Logo instead of the car** option that shows team logos instead of cars (handy when replaying older seasons), and six new colour themes (Midnight blue, Forest, Sunset, Violet night, Mono blue, Cream).
